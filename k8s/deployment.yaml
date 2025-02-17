@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-ms-deployment
+  namespace: devops
+spec:
+  selector:
+    matchLabels:
+      app: stock-ms-k8s
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: stock-ms-k8s
+    spec:
+      containers:
+        - name: stock-ms-k8s
+          image: stock-ms-k8s/stock-ms-k8s:1.0.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 7070

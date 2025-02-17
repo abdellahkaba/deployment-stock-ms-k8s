@@ -1,0 +1,7 @@
+services:
+  stock-ms-k8s:
+    container_name: stock-ms-k8s
+    image: stock-ms-k8s/stock-ms-k8s:1.0.0
+    ports:
+      - "7070:7070"
+
