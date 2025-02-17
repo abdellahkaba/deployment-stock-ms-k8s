@@ -28,6 +28,14 @@ K8S : minikube et kubectl
     kubectl apply -k ./
     kubectl delete -k ./
 
+Enregistrer l'image de l'application spring boot dans minikube
+
+        minikube image load stock-ms-k8s/stock-ms-k8s:1.0.0
+
+Obtenir l'url apres deploiement
+
+        minikube service stock-ms-service -n devops --url
+
 Quelques Test d'image
 
   ![image1](https://github.com/user-attachments/assets/5a9c9e1f-c141-4cdf-abfa-b5c3b8e4c66d)
@@ -45,6 +53,11 @@ Quelques Test d'image
   ![image8](https://github.com/user-attachments/assets/9a01daf5-2b40-4a80-8de7-d1add8d43d56)
 
   ![image12](https://github.com/user-attachments/assets/b2b0acb1-c9f1-414f-9ec0-1d28f1839dde)
+
+  ![image15](https://github.com/user-attachments/assets/c734a296-ae4c-4dc4-8ae6-7ec7c19b2cda)
+
+  
+
 
 
 
